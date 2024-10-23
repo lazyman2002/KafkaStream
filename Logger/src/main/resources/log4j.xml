@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">    <Appenders>
+        <File name="FileLogger" fileName="hdfs://192.18.0.2:9000/user/WBAC/pageviewlog/pageview-${date:yyyy-MM-dd}.log" append="true">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1} - %m%n"/>
+        </File>
+    </Appenders>
+    <Loggers>
+        <Root level="info">
+            <AppenderRef ref="FileLogger"/>
+        </Root>
+    </Loggers>
+</Configuration>
